@@ -311,12 +311,15 @@ fn ui(f: &mut Frame, app: &mut App) {
         .add_modifier(Modifier::BOLD);
     let pad_to = CELL_W as usize;
 
+    let rule_width = grid.width as usize;
     let mut lines: Vec<Line> = Vec::new();
     let mut sel_vis_row = 0usize;
     let mut flat = 0usize;
     for block in &app.groups {
+        let label = format!("── {} ", block.name);
+        let trailing = rule_width.saturating_sub(label.width());
         lines.push(Line::from(Span::styled(
-            format!(" {} ", block.name),
+            format!("{}{}", label, "─".repeat(trailing)),
             header_style,
         )));
         let n = block.items.len();
