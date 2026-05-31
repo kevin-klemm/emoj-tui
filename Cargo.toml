@@ -1,0 +1,23 @@
+[package]
+name = "emoji-picker-tui"
+version = "0.1.0"
+edition = "2021"
+description = "A tiny, fast terminal emoji picker — type to filter, Enter to copy."
+license = "MIT"
+
+[[bin]]
+name = "emoji"
+path = "src/main.rs"
+
+[dependencies]
+ratatui = "0.29"
+crossterm = "0.28"
+emojis = "0.6"
+arboard = "3"
+nucleo-matcher = "0.3"
+unicode-width = "0.2"
+
+[profile.release]
+opt-level = 3
+lto = true
+strip = true
