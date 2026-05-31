@@ -16,15 +16,15 @@ const CELL_W: u16 = 4;
 
 /// Emoji groups in their canonical display order, with friendly labels.
 const GROUPS: [(Group, &str); 9] = [
-    (Group::SmileysAndEmotion, "😀 Smileys & Emotion"),
-    (Group::PeopleAndBody, "🧑 People & Body"),
-    (Group::AnimalsAndNature, "🐻 Animals & Nature"),
-    (Group::FoodAndDrink, "🍔 Food & Drink"),
-    (Group::TravelAndPlaces, "🌍 Travel & Places"),
-    (Group::Activities, "⚽ Activities"),
-    (Group::Objects, "💡 Objects"),
-    (Group::Symbols, "🔣 Symbols"),
-    (Group::Flags, "🏁 Flags"),
+    (Group::SmileysAndEmotion, "Smileys & Emotion"),
+    (Group::PeopleAndBody, "People & Body"),
+    (Group::AnimalsAndNature, "Animals & Nature"),
+    (Group::FoodAndDrink, "Food & Drink"),
+    (Group::TravelAndPlaces, "Travel & Places"),
+    (Group::Activities, "Activities"),
+    (Group::Objects, "Objects"),
+    (Group::Symbols, "Symbols"),
+    (Group::Flags, "Flags"),
 ];
 
 struct EmojiItem {
@@ -307,7 +307,7 @@ fn ui(f: &mut Frame, app: &mut App) {
     app.rebuild_nav(cols);
 
     let header_style = Style::default()
-        .fg(Color::Yellow)
+        .fg(Color::Cyan)
         .add_modifier(Modifier::BOLD);
     let pad_to = CELL_W as usize;
 
