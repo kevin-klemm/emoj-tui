@@ -2,15 +2,7 @@
 
 A tiny, fast terminal emoji picker. Type to filter, arrow keys to move, **Enter to copy** to the clipboard. No ads, no network, no telemetry — inspired by [letsemoji.com](https://letsemoji.com).
 
-```
-┌ 🔍  search emoji ──────────────────────────┐
-│ heart                                      │
-└────────────────────────────────────────────┘
- ❤  🧡  💛  💚  💙  💜  🤎  🖤  🤍  💔  ❣  💕
- 💞  💓  💗  💖  💘  💝  💟  ♥  …
-
- ❤  red heart   ·   1/42        ⏎ copy  ↑↓←→ move  esc clear/quit
-```
+![emoj-tui screenshot](assets/screenshot.png)
 
 ## Build & run
 
