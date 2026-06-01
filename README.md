@@ -3,7 +3,7 @@
 A tiny, fast terminal emoji picker. Type to filter, arrow keys to move, **Enter to copy** to the clipboard. No ads, no network, no telemetry — inspired by [letsemoji.com](https://letsemoji.com).
 
 ```
-┌ 🔍  search emoji ─────────────────────────┐
+┌ 🔍  search emoji ──────────────────────────┐
 │ heart                                      │
 └────────────────────────────────────────────┘
  ❤  🧡  💛  💚  💙  💜  🤎  🖤  🤍  💔  ❣  💕
@@ -40,7 +40,3 @@ emoji
 ## How it works
 
 All ~3,700 emoji ship compiled into the binary via the [`emojis`](https://crates.io/crates/emojis) crate (names + GitHub shortcodes). Emoji are organized under category headers (Smileys & Emotion, People & Body, Animals & Nature, …). Search is fuzzy-matched and ranked in-memory with [`nucleo-matcher`](https://crates.io/crates/nucleo-matcher), so every keystroke re-filters instantly; matches stay grouped by category, with the category holding the best match shown first. The UI is [`ratatui`](https://ratatui.rs); clipboard is [`arboard`](https://crates.io/crates/arboard).
-
-## License
-
-MIT
