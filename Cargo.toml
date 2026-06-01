@@ -1,5 +1,5 @@
 [package]
-name = "emoji-picker-tui"
+name = "emoj-tui"
 version = "0.1.0"
 edition = "2021"
 description = "A tiny, fast terminal emoji picker — type to filter, Enter to copy."

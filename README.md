@@ -1,4 +1,4 @@
-# emoji-picker-tui
+# emoj-tui
 
 A tiny, fast terminal emoji picker. Type to filter, arrow keys to move, **Enter to copy** to the clipboard. No ads, no network, no telemetry — inspired by [letsemoji.com](https://letsemoji.com).
 
