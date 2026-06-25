@@ -42,6 +42,8 @@ struct GroupBlock {
     items: Vec<usize>,
 }
 
+type ScoredBuckets<'a> = Vec<(u32, &'a str, Vec<(u32, usize)>)>;
+
 struct App {
     items: Vec<EmojiItem>,
     query: String,
@@ -119,7 +121,7 @@ impl App {
             // single most relevant emoji still sits at the very top.
             let pattern = Pattern::parse(query, CaseMatching::Ignore, Normalization::Smart);
             let mut buf = Vec::new();
-            let mut buckets: Vec<(u32, &str, Vec<(u32, usize)>)> = GROUPS
+            let mut buckets: ScoredBuckets = GROUPS
                 .iter()
                 .map(|(_, name)| (0u32, *name, Vec::new()))
                 .collect();
