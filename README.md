@@ -1,5 +1,9 @@
 # emoj-tui
 
+[![CI](https://github.com/kevin-klemm/emoj-tui/actions/workflows/ci.yml/badge.svg)](https://github.com/kevin-klemm/emoj-tui/actions/workflows/ci.yml)
+[![Rust](https://img.shields.io/badge/Rust-2021-orange)](https://www.rust-lang.org)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+
 A tiny, fast terminal emoji picker. Type to filter, arrow keys to move, **Enter to copy** to the clipboard. No ads, no network, no telemetry — inspired by [letsemoji.com](https://letsemoji.com).
 
 ![emoj-tui screenshot](assets/screenshot.png)
@@ -32,3 +36,7 @@ emoji
 ## How it works
 
 All ~3,700 emoji ship compiled into the binary via the [`emojis`](https://crates.io/crates/emojis) crate (names + GitHub shortcodes). Emoji are organized under category headers (Smileys & Emotion, People & Body, Animals & Nature, …). Search is fuzzy-matched and ranked in-memory with [`nucleo-matcher`](https://crates.io/crates/nucleo-matcher), so every keystroke re-filters instantly; matches stay grouped by category, with the category holding the best match shown first. The UI is [`ratatui`](https://ratatui.rs); clipboard is [`arboard`](https://crates.io/crates/arboard).
+
+## License
+
+[MIT](LICENSE) © 2026 Kevin Klemm
