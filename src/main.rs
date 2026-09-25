@@ -136,7 +136,7 @@ impl App {
             }
 
             buckets.retain(|(_, _, v)| !v.is_empty());
-            buckets.sort_by(|a, b| b.0.cmp(&a.0));
+            buckets.sort_by_key(|b| std::cmp::Reverse(b.0));
             for (_, name, mut v) in buckets {
                 v.sort_by(|a, b| b.0.cmp(&a.0).then(a.1.cmp(&b.1)));
                 blocks.push(GroupBlock {
